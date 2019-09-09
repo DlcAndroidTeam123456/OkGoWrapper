@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+
+
+android {
+
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    api 'com.android.support:support-annotations:27.1.1'
+    // rx全家桶
+    api "io.reactivex.rxjava2:rxjava:2.2.6"
+    api 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    // gson
+    api 'com.google.code.gson:gson:2.8.2'
+    // okgo
+    api 'com.lzy.net:okgo:3.0.4'
+    api 'com.squareup.okhttp3:okhttp:3.12.0'
+    // LogPlus
+    api 'com.github.licheedev.SomeLibrary:myutils:0.02'
+}
+
+// 应用maven脚本
+apply from: '../jitpack.gradle'

@@ -9,6 +9,6 @@
 	}
 	
 	dependencies {
-	        implementation 'com.gitee.dlcandroid:OkGoWrapper:1.0.0'
+	        implementation 'com.github.DlcAndroidTeam123456:OkGoWrapper:1.0.0'
 	}
 ```
